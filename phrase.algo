@@ -1,0 +1,26 @@
+ALGORITHM algocheckpiont
+VAR
+    c : "CHAR";
+    vowels : INTEGER :=0;
+    words  : INTEGER :=0;
+    nbrchar : INTEGER :=0;
+BEGIN
+    Write("Donnez un char");
+    read (c);
+
+    IF (c = "a" OR c = "e" OR c = "i" OR c = "o" OR c = "u" OR c = "y") THEN
+        vowels = vowels + 1;
+    END_IF
+
+    IF (c= " " or c = ".") THEN
+        words = words + 1 ;
+    END_IF
+
+    WHILE (c <> " " AND c <> "." ) DO
+        nbrchar = nbrchar + 1;
+    END_WHILE
+
+    Write(vowels);
+    Write(words);
+    Write(nbrchar);
+END
