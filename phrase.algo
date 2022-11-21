@@ -1,8 +1,7 @@
 ALGORITHM algocheckpiont
 VAR
     c : "CHAR";
-    x : "char" := c;
-    y : "char" := x + c;
+    x : "char";
     
     vowels : INTEGER :=0;
     words  : INTEGER :=0;
@@ -24,9 +23,11 @@ BEGIN
 
     
 
-    IF ((c= " " AND y <> "  " ) OR c = ".") THEN
+    IF ((c= " " AND x <> "  " ) OR c = ".") THEN
         words = words + 1;        
     END_IF
+
+    x := c + " "
 
     Write(vowels);
     Write(words);
