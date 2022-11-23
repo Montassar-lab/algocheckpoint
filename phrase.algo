@@ -1,7 +1,6 @@
 ALGORITHM algocheckpiont
 VAR
     c : "CHAR";
-    x : "char";
     
     vowels : INTEGER :=0;
     words  : INTEGER :=0;
@@ -10,26 +9,26 @@ VAR
    
 BEGIN
 
-    Write("Donnez un char");
-    read (c);
+    REPEAT
+       
+        Write("Donnez un char");
+        read (c);
 
-    IF (c = "a" OR c = "e" OR c = "i" OR c = "o" OR c = "u" OR c = "y") THEN
-        vowels = vowels + 1;
-    END_IF
+        IF (c = "a" OR c = "e" OR c = "i" OR c = "o" OR c = "u" OR c = "y") THEN
+            vowels = vowels + 1;
+        END_IF
 
-    WHILE (c <> " " AND c <> "." ) DO
-        nbrchar = nbrchar + 1;
-    END_WHILE
+        IF (c <> " " ) DO
+            nbrchar = nbrchar + 1;
+        END_IF
 
-    
+        IF (c= " " ) THEN
+            words = words + 1;        
+        END_IF
 
-    IF ((c= " " AND x <> "  " ) OR c = ".") THEN
-        words = words + 1;        
-    END_IF
+        Write(vowels);
+        Write(words);
+        Write(nbrchar);
 
-    x := c + " "
-
-    Write(vowels);
-    Write(words);
-    Write(nbrchar);
+    UNTIL (c = ".")
 END
